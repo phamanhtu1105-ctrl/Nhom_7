@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_trang_chu"
+        android:icon="@drawable/ic_trang_chu"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/menu_tim_viec"
+        android:icon="@drawable/ic_tim_viec"
+        android:title="Tìm việc" />
+    <item
+        android:id="@+id/menu_yeu_thich"
+        android:icon="@drawable/ic_yeu_thich"
+        android:title="Yêu thích" />
+    <item
+        android:id="@+id/menu_don_ung_tuyen"
+        android:icon="@drawable/ic_don_ung_tuyen"
+        android:title="Đơn ứng tuyển" />
+    <item
+        android:id="@+id/menu_ho_so"
+        android:icon="@drawable/ic_ho_so"
+        android:title="Cá nhân" />
+</menu>

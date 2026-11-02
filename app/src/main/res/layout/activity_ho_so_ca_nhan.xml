@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/mau_chu_dao"
+            android:gravity="center"
+            android:text="HỒ SƠ CÁ NHÂN"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Thẻ Thông tin cá nhân -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="THÔNG TIN CÁ NHÂN"
+                        android:textColor="@color/mau_chu_dao"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Mã sinh viên"
+                        android:textColor="@color/mau_chu_phu"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvMaSinhVien"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="SV001"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Email"
+                        android:textColor="@color/mau_chu_phu"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="sv001@gmail.com"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Họ và tên (*)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtHoTen"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:inputType="textPersonName"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Số điện thoại (*)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtSoDienThoai"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:inputType="phone"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Trường học (*)"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtTenTruong"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:inputType="text"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="Giới thiệu bản thân"
+                        android:textColor="@color/mau_chu_chinh"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtGioiThieu"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:gravity="top|start"
+                        android:inputType="textMultiLine"
+                        android:padding="8dp"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnCapNhatHoSo"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="16dp"
+                        android:backgroundTint="@color/mau_chu_dao"
+                        android:text="LƯU THÔNG TIN HỒ SƠ"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Thẻ Đổi Mật Khẩu -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/white"
+                    android:elevation="2dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ĐỔI MẬT KHẨU"
+                        android:textColor="@color/mau_chu_dao"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/edtMatKhauCu"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:hint="Mật khẩu hiện tại"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/edtMatKhauMoi"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:hint="Mật khẩu mới (ít nhất 6 ký tự)"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/edtXacNhanMatKhauMoi"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/khung_nhap_lieu"
+                        android:hint="Xác nhận mật khẩu mới"
+                        android:inputType="textPassword"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:id="@+id/btnDoiMatKhau"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="16dp"
+                        android:text="ĐỔI MẬT KHẨU"
+                        android:textColor="@color/mau_chu_dao"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <!-- Nút Đăng Xuất -->
+                <Button
+                    android:id="@+id/btnDangXuat"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/mau_do"
+                    android:text="ĐĂNG XUẤT TÀI KHOẢN"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="@color/mau_chu_dao"
+        app:itemTextColor="@color/mau_chu_dao"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>

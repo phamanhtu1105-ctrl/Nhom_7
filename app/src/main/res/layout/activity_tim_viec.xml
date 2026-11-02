@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/mau_chu_dao"
+            android:gravity="center"
+            android:text="TÌM KIẾM CÔNG VIỆC"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!-- Ô Tìm kiếm & Bộ Lọc -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/khung_nhap_lieu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp">
+
+                <EditText
+                    android:id="@+id/edtTimKiem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="Nhập tên công việc, nhà tuyển dụng..."
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/btnTimKiem"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:contentDescription="Tìm kiếm"
+                    android:src="@drawable/ic_tim_viec"
+                    app:tint="@color/mau_chu_dao" />
+            </LinearLayout>
+
+            <!-- Bảng lọc Spinner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spnDanhMuc"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Spinner
+                    android:id="@+id/spnDiaDiem"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Spinner
+                    android:id="@+id/spnSapXep"
+                    android:layout_width="0dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Danh sách kết quả -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDanhSachViecLam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp" />
+
+        <TextView
+            android:id="@+id/tvKhongCoDuLieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Không tìm thấy công việc phù hợp."
+            android:textColor="@color/mau_chu_phu"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="@color/mau_chu_dao"
+        app:itemTextColor="@color/mau_chu_dao"
+        app:menu="@menu/bottom_navigation_menu" />
+
+</RelativeLayout>
