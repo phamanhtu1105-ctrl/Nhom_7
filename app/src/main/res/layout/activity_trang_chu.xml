@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mau_nen">
+    android:background="@color/mau_nen"
+    tools:ignore="all">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -28,7 +30,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Xin chào,"
+                    android:text="@string/lbl_xin_chao"
                     android:textColor="#E3F2FD"
                     android:textSize="14sp" />
 
@@ -46,7 +48,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Tìm công việc bán thời gian phù hợp với bạn!"
+                    android:text="@string/sub_title_trang_chu"
                     android:textColor="#E3F2FD"
                     android:textSize="13sp" />
 
@@ -66,7 +68,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@null"
-                        android:hint="Tìm kiếm tên công việc, vị trí..."
+                        android:hint="@string/hint_tim_kiem_nhanh"
                         android:imeOptions="actionSearch"
                         android:inputType="text"
                         android:textSize="14sp" />
@@ -75,9 +77,9 @@
                         android:id="@+id/btnTimKiem"
                         android:layout_width="28dp"
                         android:layout_height="28dp"
-                        android:contentDescription="Tìm kiếm"
+                        android:contentDescription="@string/title_tim_kiem_cong_viec"
                         android:src="@drawable/ic_tim_viec"
-                        app:tint="@color/mau_chu_dao" />
+                        android:tint="@color/mau_chu_dao" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -88,7 +90,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:text="DANH MỤC CÔNG VIỆC"
+                android:text="@string/title_danh_muc"
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="15sp"
                 android:textStyle="bold" />
@@ -114,7 +116,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CÔNG VIỆC MỚI NHẤT"
+                    android:text="@string/title_viec_moi"
                     android:textColor="@color/mau_chu_chinh"
                     android:textSize="15sp"
                     android:textStyle="bold" />

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mau_nen">
+    android:background="@color/mau_nen"
+    tools:ignore="HardcodedText,Autofill,ContentDescription">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +18,7 @@
             android:layout_height="50dp"
             android:background="@color/mau_chu_dao"
             android:gravity="center"
-            android:text="ĐƠN ỨNG TUYỂN CỦA TÔI"
+            android:text="@string/title_don_ung_tuyen_cua_toi"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />

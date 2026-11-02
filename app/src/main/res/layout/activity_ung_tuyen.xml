@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mau_nen"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:ignore="HardcodedText,Autofill">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +26,7 @@
                 android:id="@+id/btnQuayLai"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:contentDescription="Quay lại"
+                android:contentDescription="@string/title_nop_don_ung_tuyen"
                 android:src="@drawable/ic_trang_chu"
                 app:tint="@color/white" />
 
@@ -33,7 +35,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="NỘP ĐƠN ỨNG TUYỂN"
+                android:text="@string/title_nop_don_ung_tuyen"
                 android:textColor="@color/white"
                 android:textSize="17sp"
                 android:textStyle="bold" />
@@ -100,7 +102,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Lời giới thiệu bản thân (*)"
+                    android:text="@string/lbl_loi_gioi_thieu_req"
                     android:textColor="@color/mau_chu_chinh"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -109,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Nêu ngắn gọn lịch học, kinh nghiệm hoặc mong muốn công việc để gây ấn tượng với nhà tuyển dụng."
+                    android:text="@string/sub_lbl_loi_gioi_thieu"
                     android:textColor="@color/mau_chu_phu"
                     android:textSize="12sp" />
 
@@ -120,7 +122,7 @@
                     android:layout_marginTop="10dp"
                     android:background="@drawable/khung_nhap_lieu"
                     android:gravity="top|start"
-                    android:hint="Ví dụ: Em muốn đăng ký ca làm việc buổi tối vì ban ngày bận lịch học ở trường..."
+                    android:hint="@string/hint_loi_gioi_thieu"
                     android:inputType="textMultiLine"
                     android:padding="10dp"
                     android:textSize="14sp" />
@@ -133,7 +135,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="24dp"
                 android:backgroundTint="@color/mau_chu_dao"
-                android:text="GỬI ĐƠN ỨNG TUYỂN"
+                android:text="@string/btn_gui_don_ung_tuyen"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold" />

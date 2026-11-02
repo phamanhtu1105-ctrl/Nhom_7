@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mau_nen">
+    android:background="@color/mau_nen"
+    tools:ignore="all">
 
     <!-- Header Toolbar -->
     <LinearLayout
@@ -22,14 +23,14 @@
             android:layout_height="28dp"
             android:contentDescription="Quay lại"
             android:src="@drawable/ic_trang_chu"
-            app:tint="@color/white" />
+            android:tint="@color/white" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="CHI TIẾT CÔNG VIỆC"
+            android:text="@string/title_chi_tiet_cong_viec"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -40,7 +41,7 @@
             android:layout_height="28dp"
             android:contentDescription="Lưu yêu thích"
             android:src="@drawable/ic_yeu_thich"
-            app:tint="@color/white" />
+            android:tint="@color/white" />
     </LinearLayout>
 
     <ScrollView

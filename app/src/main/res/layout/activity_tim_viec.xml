@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mau_nen">
+    android:background="@color/mau_nen"
+    tools:ignore="all">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +19,7 @@
             android:layout_height="50dp"
             android:background="@color/mau_chu_dao"
             android:gravity="center"
-            android:text="TÌM KIẾM CÔNG VIỆC"
+            android:text="@string/title_tim_kiem_cong_viec"
             android:textColor="@color/white"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -45,8 +47,9 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="@null"
-                    android:hint="Nhập tên công việc, nhà tuyển dụng..."
+                    android:hint="@string/hint_tim_kiem_nhanh"
                     android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
                     android:inputType="text"
                     android:textSize="14sp" />
 
@@ -54,7 +57,7 @@
                     android:id="@+id/btnTimKiem"
                     android:layout_width="26dp"
                     android:layout_height="26dp"
-                    android:contentDescription="Tìm kiếm"
+                    android:contentDescription="@string/title_tim_kiem_cong_viec"
                     android:src="@drawable/ic_tim_viec"
                     app:tint="@color/mau_chu_dao" />
             </LinearLayout>
