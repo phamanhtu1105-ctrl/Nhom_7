@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mau_nen"
-    tools:ignore="HardcodedText,Autofill,ContentDescription">
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomNavigation"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
         <TextView
             android:layout_width="match_parent"
@@ -21,13 +22,15 @@
             android:text="@string/title_cong_viec_yeu_thich"
             android:textColor="@color/white"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDanhSachYeuThich"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="6dp" />
+            android:layout_marginTop="6dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
         <TextView
             android:id="@+id/tvKhongCoDuLieu"
@@ -35,10 +38,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:text="Danh sách yêu thích đang trống."
+            android:text="@string/no_data_empty"
             android:textColor="@color/mau_chu_phu"
             android:textSize="14sp"
-            android:visibility="gone" />
+            android:visibility="gone"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
     </LinearLayout>
 
@@ -51,6 +55,7 @@
         android:elevation="8dp"
         app:itemIconTint="@color/mau_chu_dao"
         app:itemTextColor="@color/mau_chu_dao"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
 </RelativeLayout>

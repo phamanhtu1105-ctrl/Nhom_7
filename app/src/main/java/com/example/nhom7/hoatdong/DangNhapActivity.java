@@ -34,9 +34,9 @@ public class DangNhapActivity extends AppCompatActivity {
 
         quanLyPhien = new QuanLyPhien(this);
 
-        // Kiểm tra nếu đã đăng nhập trước đó thì chuyển thẳng đến Trang Chu
+        // Kiểm tra nếu đã đăng nhập trước đó
         if (quanLyPhien.daDangNhap()) {
-            chuyenTrangChu();
+            chuyenManHinhTheoQuyen();
             finish();
             return;
         }
@@ -98,15 +98,20 @@ public class DangNhapActivity extends AppCompatActivity {
             quanLyPhien.taoPhienDangNhap(sv.getSinhVienId(), sv.getMaSinhVien(), sv.getHoTen(), sv.getEmail());
             Toast.makeText(this, "Đăng nhập thành công! Chào " + sv.getHoTen(), Toast.LENGTH_SHORT).show();
 
-            chuyenTrangChu();
+            chuyenManHinhTheoQuyen();
             finish();
         } else {
             Toast.makeText(this, "Email hoặc mật khẩu không chính xác!", Toast.LENGTH_LONG).show();
         }
     }
 
-    private void chuyenTrangChu() {
-        Intent intent = new Intent(DangNhapActivity.this, TrangChuActivity.class);
+    private void chuyenManHinhTheoQuyen() {
+        Intent intent;
+        if (quanLyPhien.laAdmin()) {
+            intent = new Intent(DangNhapActivity.this, AdminActivity.class);
+        } else {
+            intent = new Intent(DangNhapActivity.this, TrangChuActivity.class);
+        }
         startActivity(intent);
     }
 }

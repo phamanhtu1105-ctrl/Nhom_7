@@ -37,6 +37,13 @@ public class QuanLyPhien {
         return pref.getBoolean(KEY_IS_LOGGED_IN, false);
     }
 
+    // Kiểm tra phiên đăng nhập hiện tại có phải tài khoản Admin không
+    public boolean laAdmin() {
+        String email = layEmail();
+        String maSV = layMaSinhVien();
+        return "admin@gmail.com".equalsIgnoreCase(email) || "ADMIN001".equalsIgnoreCase(maSV);
+    }
+
     // Lấy ID sinh viên hiện tại
     public int laySinhVienId() {
         return pref.getInt(KEY_SINH_VIEN_ID, -1);

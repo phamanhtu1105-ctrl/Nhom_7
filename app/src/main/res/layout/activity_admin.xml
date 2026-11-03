@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen"
+    tools:ignore="all">
+
+    <!-- Header Toolbar -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/mau_chu_dao_dam"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        tools:ignore="all">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="QUẢN TRỊ HỆ THỐNG (ADMIN)"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <Button
+            android:id="@+id/btnDangXuatAdmin"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:paddingHorizontal="12dp"
+            android:text="Đăng xuất"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:ignore="all" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layoutHeader"
+        android:fillViewport="true"
+        tools:ignore="all">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:ignore="all">
+
+            <!-- Thống kê nhanh -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="all">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvTongDon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_chu_dao"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Đơn ứng tuyển"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="12sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvTongViec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_phu"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Công việc đăng tuyển"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="12sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Nút Thêm công việc mới -->
+            <Button
+                android:id="@+id/btnThemViecLam"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/mau_phu"
+                android:text="+ THÊM CÔNG VIỆC MỚI"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="all" />
+
+            <!-- Danh sách Duyệt Đơn -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="DANH SÁCH ĐƠN ỨNG TUYỂN CỦA SINH VIÊN"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="all" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDonUngTuyenAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:nestedScrollingEnabled="false"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvKhongCoDonAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center"
+                android:text="Chưa có đơn ứng tuyển nào."
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:ignore="all" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

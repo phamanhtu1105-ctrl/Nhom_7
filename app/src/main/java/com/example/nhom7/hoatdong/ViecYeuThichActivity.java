@@ -55,7 +55,7 @@ public class ViecYeuThichActivity extends AppCompatActivity {
 
     private void taiDanhSachYeuThich() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             tvKhongCoDuLieu.setVisibility(View.VISIBLE);
             rvDanhSachYeuThich.setVisibility(View.GONE);
             return;

@@ -38,7 +38,6 @@ public class ChiTietViecActivity extends AppCompatActivity {
     private QuanLyPhien quanLyPhien;
 
     private int viecLamId = -1;
-    private ViecLam viecLamCurrent;
     private boolean isYeuThich = false;
     private final DecimalFormat dinhDangTien = new DecimalFormat("#,###");
 
@@ -53,7 +52,7 @@ public class ChiTietViecActivity extends AppCompatActivity {
         quanLyPhien = new QuanLyPhien(this);
 
         viecLamId = getIntent().getIntExtra("viecLamId", -1);
-        if (viecLamId == -1) {
+        if (viecLamId < 0) {
             Toast.makeText(this, "Không tìm thấy thông tin công việc!", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -81,7 +80,7 @@ public class ChiTietViecActivity extends AppCompatActivity {
     }
 
     private void taiThongTinChiTiet() {
-        viecLamCurrent = viecLamDAO.layViecLamTheoId(viecLamId);
+        ViecLam viecLamCurrent = viecLamDAO.layViecLamTheoId(viecLamId);
         if (viecLamCurrent == null) {
             Toast.makeText(this, "Lỗi tải dữ liệu công việc!", Toast.LENGTH_SHORT).show();
             finish();
@@ -94,10 +93,17 @@ public class ChiTietViecActivity extends AppCompatActivity {
         String luongText = "Mức lương: " + dinhDangTien.format(viecLamCurrent.getMucLuong()) + " VNĐ/giờ";
         tvMucLuong.setText(luongText);
 
-        tvDiaDiem.setText("Địa điểm: " + (viecLamCurrent.getDiaDiem() != null ? viecLamCurrent.getDiaDiem() : "Chưa cập nhật"));
-        tvThoiGianLamViec.setText("Thời gian: " + (viecLamCurrent.getThoiGianLamViec() != null ? viecLamCurrent.getThoiGianLamViec() : "Linh hoạt"));
-        tvHinhThucLamViec.setText("Hình thức: " + (viecLamCurrent.getHinhThucLamViec() != null ? viecLamCurrent.getHinhThucLamViec() : "Bán thời gian"));
-        tvHanUngTuyen.setText("Hạn ứng tuyển: " + (viecLamCurrent.getHanUngTuyen() != null ? viecLamCurrent.getHanUngTuyen() : "Đang tuyển"));
+        String diaDiemStr = viecLamCurrent.getDiaDiem() != null ? viecLamCurrent.getDiaDiem() : "Chưa cập nhật";
+        tvDiaDiem.setText(String.format("Địa điểm: %s", diaDiemStr));
+
+        String thoiGianStr = viecLamCurrent.getThoiGianLamViec() != null ? viecLamCurrent.getThoiGianLamViec() : "Linh hoạt";
+        tvThoiGianLamViec.setText(String.format("Thời gian: %s", thoiGianStr));
+
+        String hinhThucStr = viecLamCurrent.getHinhThucLamViec() != null ? viecLamCurrent.getHinhThucLamViec() : "Bán thời gian";
+        tvHinhThucLamViec.setText(String.format("Hình thức: %s", hinhThucStr));
+
+        String hanStr = viecLamCurrent.getHanUngTuyen() != null ? viecLamCurrent.getHanUngTuyen() : "Đang tuyển";
+        tvHanUngTuyen.setText(String.format("Hạn ứng tuyển: %s", hanStr));
 
         tvMoTa.setText(viecLamCurrent.getMoTa() != null ? viecLamCurrent.getMoTa() : "Chưa có mô tả.");
         tvYeuCau.setText(viecLamCurrent.getYeuCau() != null ? viecLamCurrent.getYeuCau() : "Không yêu cầu đặc biệt.");
@@ -129,7 +135,7 @@ public class ChiTietViecActivity extends AppCompatActivity {
 
     private void xuLyYeuThich() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             Toast.makeText(this, "Vui lòng đăng nhập để lưu công việc!", Toast.LENGTH_SHORT).show();
             return;
         }
@@ -154,7 +160,7 @@ public class ChiTietViecActivity extends AppCompatActivity {
 
     private void xuLyUngTuyen() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             Toast.makeText(this, "Vui lòng đăng nhập để ứng tuyển!", Toast.LENGTH_SHORT).show();
             return;
         }

@@ -52,6 +52,8 @@
     <string name="btn_gui_don_ung_tuyen">GỬI ĐƠN ỨNG TUYỂN</string>
     <string name="text_quay_lai">Quay lại</string>
     <string name="text_yeu_thich">Yêu thích</string>
+    <string name="btn_huy_don">Hủy đơn</string>
+    <string name="status_cho_xet_duyet">Chờ xét duyệt</string>
 
     <!-- Màn hình Tìm việc, Yêu thích, Đơn, Hồ sơ -->
     <string name="title_tim_kiem_cong_viec">TÌM KIẾM CÔNG VIỆC</string>

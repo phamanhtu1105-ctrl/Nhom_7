@@ -88,4 +88,51 @@ public class UngTuyenDAO {
         db.close();
         return rows > 0;
     }
+
+    // [Dành cho Admin] Lấy tất cả đơn ứng tuyển hệ thống
+    public List<DonUngTuyen> layTatCaDonUngTuyen() {
+        List<DonUngTuyen> list = new ArrayList<>();
+        SQLiteDatabase db = dbHelper.getReadableDatabase();
+
+        String sql = "SELECT ut.*, vl.ten_viec_lam, vl.muc_luong, ntd.ten_nha_tuyen_dung, sv.ho_ten AS ho_ten_sv " +
+                "FROM " + QuanLyCSDL.BANG_DON_UNG_TUYEN + " ut " +
+                "INNER JOIN " + QuanLyCSDL.BANG_VIEC_LAM + " vl ON ut.viec_lam_id = vl.viec_lam_id " +
+                "LEFT JOIN " + QuanLyCSDL.BANG_NHA_TUYEN_DUNG + " ntd ON vl.nha_tuyen_dung_id = ntd.nha_tuyen_dung_id " +
+                "LEFT JOIN " + QuanLyCSDL.BANG_SINH_VIEN + " sv ON ut.sinh_vien_id = sv.sinh_vien_id " +
+                "ORDER BY ut.don_ung_tuyen_id DESC";
+
+        Cursor cursor = db.rawQuery(sql, null);
+        if (cursor.moveToFirst()) {
+            do {
+                DonUngTuyen ut = new DonUngTuyen();
+                ut.setDonUngTuyenId(cursor.getInt(cursor.getColumnIndexOrThrow("don_ung_tuyen_id")));
+                ut.setSinhVienId(cursor.getInt(cursor.getColumnIndexOrThrow("sinh_vien_id")));
+                ut.setViecLamId(cursor.getInt(cursor.getColumnIndexOrThrow("viec_lam_id")));
+                ut.setLoiGioiThieu(cursor.getString(cursor.getColumnIndexOrThrow("loi_gioi_thieu")));
+                ut.setNgayUngTuyen(cursor.getString(cursor.getColumnIndexOrThrow("ngay_ung_tuyen")));
+                ut.setTrangThai(cursor.getString(cursor.getColumnIndexOrThrow("trang_thai")));
+
+                ut.setTenViecLam(cursor.getString(cursor.getColumnIndexOrThrow("ten_viec_lam")));
+                ut.setMucLuong(cursor.getDouble(cursor.getColumnIndexOrThrow("muc_luong")));
+                ut.setTenNhaTuyenDung(cursor.getString(cursor.getColumnIndexOrThrow("ten_nha_tuyen_dung")));
+                ut.setHoTenSinhVien(cursor.getString(cursor.getColumnIndexOrThrow("ho_ten_sv")));
+
+                list.add(ut);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return list;
+    }
+
+    // [Dành cho Admin] Cập nhật trạng thái đơn ứng tuyển (Chấp nhận / Từ chối)
+    public boolean capNhatTrangThaiDon(int donUngTuyenId, String trangThaiMoi) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("trang_thai", trangThaiMoi);
+
+        int rows = db.update(QuanLyCSDL.BANG_DON_UNG_TUYEN, cv, "don_ung_tuyen_id = ?", new String[]{String.valueOf(donUngTuyenId)});
+        db.close();
+        return rows > 0;
+    }
 }

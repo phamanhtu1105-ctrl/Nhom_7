@@ -50,9 +50,9 @@ public class DonUngTuyenAdapter extends RecyclerView.Adapter<DonUngTuyenAdapter.
 
         holder.tvTenViecLam.setText(don.getTenViecLam() != null ? don.getTenViecLam() : "Công việc");
         holder.tvTenNhaTuyenDung.setText(don.getTenNhaTuyenDung() != null ? don.getTenNhaTuyenDung() : "Nhà tuyển dụng");
-        holder.tvMucLuong.setText("Mức lương: " + dinhDangTien.format(don.getMucLuong()) + " VNĐ/giờ");
-        holder.tvLoiGioiThieu.setText("Lời giới thiệu: " + (don.getLoiGioiThieu() != null ? don.getLoiGioiThieu() : ""));
-        holder.tvNgayUngTuyen.setText("Ngày gửi: " + don.getNgayUngTuyen());
+        holder.tvMucLuong.setText(String.format("Mức lương: %s VNĐ/giờ", dinhDangTien.format(don.getMucLuong())));
+        holder.tvLoiGioiThieu.setText(String.format("Lời giới thiệu: %s", (don.getLoiGioiThieu() != null ? don.getLoiGioiThieu() : "")));
+        holder.tvNgayUngTuyen.setText(String.format("Ngày gửi: %s", don.getNgayUngTuyen()));
 
         String trangThai = don.getTrangThai();
         holder.tvTrangThai.setText(trangThai);

@@ -50,7 +50,7 @@ public class UngTuyenActivity extends AppCompatActivity {
         quanLyPhien = new QuanLyPhien(this);
 
         viecLamId = getIntent().getIntExtra("viecLamId", -1);
-        if (viecLamId == -1) {
+        if (viecLamId < 0) {
             Toast.makeText(this, "Không tìm thấy thông tin công việc!", Toast.LENGTH_SHORT).show();
             finish();
             return;
@@ -75,7 +75,7 @@ public class UngTuyenActivity extends AppCompatActivity {
         if (vl != null) {
             tvTenViecLam.setText(vl.getTenViecLam());
             tvTenNhaTuyenDung.setText(vl.getTenNhaTuyenDung() != null ? vl.getTenNhaTuyenDung() : "Nhà tuyển dụng");
-            tvMucLuong.setText("Mức lương: " + dinhDangTien.format(vl.getMucLuong()) + " VNĐ/giờ");
+            tvMucLuong.setText(String.format("Mức lương: %s VNĐ/giờ", dinhDangTien.format(vl.getMucLuong())));
         }
     }
 
@@ -87,7 +87,7 @@ public class UngTuyenActivity extends AppCompatActivity {
 
     private void xuLyGuiDon() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             Toast.makeText(this, "Vui lòng đăng nhập để gửi đơn!", Toast.LENGTH_SHORT).show();
             return;
         }

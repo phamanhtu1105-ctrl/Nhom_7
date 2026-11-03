@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/mau_nen"
     android:fillViewport="true"
-    tools:ignore="all">
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:padding="24dp"
-        tools:ignore="all">
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imgLogo"
@@ -22,7 +22,7 @@
             android:layout_marginTop="32dp"
             android:contentDescription="@string/app_name"
             android:src="@mipmap/ic_launcher"
-            tools:ignore="all" />
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,7 +32,7 @@
             android:textColor="@color/mau_chu_dao"
             android:textSize="22sp"
             android:textStyle="bold"
-            tools:ignore="all" />
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -41,7 +41,7 @@
             android:text="@string/sub_title_app"
             android:textColor="@color/mau_chu_phu"
             android:textSize="14sp"
-            tools:ignore="all" />
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             android:elevation="2dp"
             android:orientation="vertical"
             android:padding="20dp"
-            tools:ignore="all">
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,55 +60,57 @@
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:labelFor="@+id/edtEmail"
                 android:text="@string/lbl_email_sinh_vien"
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <EditText
                 android:id="@+id/edtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
-                android:autofillHints=""
+                android:autofillHints="emailAddress"
                 android:background="@drawable/khung_nhap_lieu"
                 android:hint="@string/hint_email"
                 android:importantForAutofill="no"
                 android:inputType="textEmailAddress"
                 android:paddingHorizontal="12dp"
                 android:textSize="14sp"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:labelFor="@+id/edtMatKhau"
                 android:text="@string/lbl_mat_khau"
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <EditText
                 android:id="@+id/edtMatKhau"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
-                android:autofillHints=""
+                android:autofillHints="password"
                 android:background="@drawable/khung_nhap_lieu"
                 android:hint="@string/hint_mat_khau"
                 android:importantForAutofill="no"
                 android:inputType="textPassword"
                 android:paddingHorizontal="12dp"
                 android:textSize="14sp"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <Button
                 android:id="@+id/btnDangNhap"
@@ -120,7 +122,7 @@
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -128,7 +130,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:orientation="horizontal"
-                tools:ignore="all">
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,7 +138,7 @@
                     android:text="@string/lbl_chua_co_tai_khoan"
                     android:textColor="@color/mau_chu_phu"
                     android:textSize="14sp"
-                    tools:ignore="all" />
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
 
                 <TextView
                     android:id="@+id/tvChuyenDangKy"
@@ -147,7 +149,7 @@
                     android:textColor="@color/mau_chu_dao"
                     android:textSize="14sp"
                     android:textStyle="bold"
-                    tools:ignore="all" />
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables" />
             </LinearLayout>
 
         </LinearLayout>

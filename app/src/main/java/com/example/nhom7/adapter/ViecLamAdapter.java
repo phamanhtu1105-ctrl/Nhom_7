@@ -53,7 +53,7 @@ public class ViecLamAdapter extends RecyclerView.Adapter<ViecLamAdapter.ViecLamV
         holder.tvMucLuong.setText(luongFormatted);
 
         holder.tvDiaDiem.setText(vl.getDiaDiem());
-        holder.tvThoiGianLamViec.setText("⏱ " + (vl.getThoiGianLamViec() != null ? vl.getThoiGianLamViec() : "Linh hoạt"));
+        holder.tvThoiGianLamViec.setText(String.format("⏱ %s", (vl.getThoiGianLamViec() != null ? vl.getThoiGianLamViec() : "Linh hoạt")));
         holder.tvHinhThucLamViec.setText(vl.getHinhThucLamViec() != null ? vl.getHinhThucLamViec() : "Bán thời gian");
 
         holder.itemView.setOnClickListener(v -> {

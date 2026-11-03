@@ -128,6 +128,17 @@ public class QuanLyCSDL extends SQLiteOpenHelper {
 
     // Phương thức chèn dữ liệu mẫu ban đầu
     private void chenDuLieuMau(SQLiteDatabase db) {
+        // 0. Chèn tài khoản Admin hệ thống (admin@gmail.com / admin123)
+        ContentValues cvAdmin = new ContentValues();
+        cvAdmin.put("ma_sinh_vien", "ADMIN001");
+        cvAdmin.put("ho_ten", "Quản Trị Viên (ADMIN)");
+        cvAdmin.put("email", "admin@gmail.com");
+        cvAdmin.put("so_dien_thoai", "0900000000");
+        cvAdmin.put("mat_khau_hash", MaHoaMatKhau.maHoaSHA256("admin123"));
+        cvAdmin.put("ten_truong", "Hệ thống Quản trị Nhom_7");
+        cvAdmin.put("gioi_thieu", "Tài khoản Quản trị viên hệ thống.");
+        db.insert(BANG_SINH_VIEN, null, cvAdmin);
+
         // 1. Chèn tài khoản sinh viên mẫu (Tài khoản thử nghiệm: sv001@gmail.com / 123456)
         ContentValues cvSV = new ContentValues();
         cvSV.put("ma_sinh_vien", "SV001");

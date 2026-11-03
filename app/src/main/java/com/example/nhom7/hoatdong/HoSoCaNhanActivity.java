@@ -66,7 +66,7 @@ public class HoSoCaNhanActivity extends AppCompatActivity {
 
     private void taiThongTinHoSo() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             chuyenSangDangNhap();
             return;
         }
@@ -141,7 +141,7 @@ public class HoSoCaNhanActivity extends AppCompatActivity {
 
         // Kiểm tra mật khẩu hiện tại có đúng không
         String matKhauCuHash = MaHoaMatKhau.maHoaSHA256(matKhauCu);
-        if (!matKhauCuHash.equals(sinhVienCurrent.getMatKhauHash())) {
+        if (!java.util.Objects.equals(matKhauCuHash, sinhVienCurrent.getMatKhauHash())) {
             edtMatKhauCu.setError("Mật khẩu hiện tại không chính xác!");
             edtMatKhauCu.requestFocus();
             return;
@@ -206,10 +206,8 @@ public class HoSoCaNhanActivity extends AppCompatActivity {
                 startActivity(new Intent(this, DonUngTuyenActivity.class));
                 finish();
                 return true;
-            } else if (itemId == R.id.menu_ho_so) {
-                return true;
             }
-            return false;
+            return itemId == R.id.menu_ho_so;
         });
     }
 

@@ -5,19 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mau_nen"
-    tools:ignore="all">
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/bottomNavigation"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="16dp">
+            android:paddingBottom="16dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
             <!-- Header Lời chào -->
             <LinearLayout
@@ -25,14 +27,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/mau_chu_dao"
                 android:orientation="vertical"
-                android:padding="20dp">
+                android:padding="20dp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/lbl_xin_chao"
-                    android:textColor="#E3F2FD"
-                    android:textSize="14sp" />
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
                 <TextView
                     android:id="@+id/tvChaoSinhVien"
@@ -42,36 +46,42 @@
                     android:text="Nguyễn Văn A"
                     android:textColor="@color/white"
                     android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="@string/sub_title_trang_chu"
-                    android:textColor="#E3F2FD"
-                    android:textSize="13sp" />
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
                 <!-- Thanh tìm kiếm nhanh -->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="46dp"
+                    android:layout_height="48dp"
                     android:layout_marginTop="16dp"
                     android:background="@drawable/khung_nhap_lieu"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="12dp">
+                    android:paddingHorizontal="12dp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
                     <EditText
                         android:id="@+id/edtTimKiem"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
+                        android:autofillHints="none"
                         android:background="@null"
                         android:hint="@string/hint_tim_kiem_nhanh"
                         android:imeOptions="actionSearch"
+                        android:importantForAutofill="no"
                         android:inputType="text"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
                     <ImageView
                         android:id="@+id/btnTimKiem"
@@ -79,7 +89,8 @@
                         android:layout_height="28dp"
                         android:contentDescription="@string/title_tim_kiem_cong_viec"
                         android:src="@drawable/ic_tim_viec"
-                        android:tint="@color/mau_chu_dao" />
+                        app:tint="@color/mau_chu_dao"
+                        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
                 </LinearLayout>
 
             </LinearLayout>
@@ -93,7 +104,8 @@
                 android:text="@string/title_danh_muc"
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="15sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvDanhMuc"
@@ -101,7 +113,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:clipToPadding="false"
-                android:paddingHorizontal="12dp" />
+                android:paddingHorizontal="12dp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
             <!-- Công việc mới nhất -->
             <LinearLayout
@@ -110,7 +123,8 @@
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
 
                 <TextView
                     android:layout_width="0dp"
@@ -119,17 +133,19 @@
                     android:text="@string/title_viec_moi"
                     android:textColor="@color/mau_chu_chinh"
                     android:textSize="15sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
                 <TextView
                     android:id="@+id/tvXemTatCa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="4dp"
-                    android:text="Xem tất cả ➔"
+                    android:text="@string/text_xem_tat_ca"
                     android:textColor="@color/mau_chu_dao"
                     android:textSize="13sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
             </LinearLayout>
 
             <androidx.recyclerview.widget.RecyclerView
@@ -137,7 +153,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
-                android:nestedScrollingEnabled="false" />
+                android:nestedScrollingEnabled="false"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
             <!-- Trường hợp rỗng -->
             <TextView
@@ -146,10 +163,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
                 android:gravity="center"
-                android:text="Hiện chưa có công việc phù hợp."
+                android:text="@string/no_data_empty"
                 android:textColor="@color/mau_chu_phu"
                 android:textSize="14sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
         </LinearLayout>
 
@@ -165,6 +183,7 @@
         android:elevation="8dp"
         app:itemIconTint="@color/mau_chu_dao"
         app:itemTextColor="@color/mau_chu_dao"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
 
 </RelativeLayout>

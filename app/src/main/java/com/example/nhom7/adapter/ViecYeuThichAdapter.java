@@ -53,7 +53,7 @@ public class ViecYeuThichAdapter extends RecyclerView.Adapter<ViecYeuThichAdapte
         if (vl != null) {
             holder.tvTenViecLam.setText(vl.getTenViecLam());
             holder.tvTenNhaTuyenDung.setText(vl.getTenNhaTuyenDung() != null ? vl.getTenNhaTuyenDung() : "Nhà tuyển dụng");
-            holder.tvMucLuong.setText(dinhDangTien.format(vl.getMucLuong()) + " VNĐ/giờ");
+            holder.tvMucLuong.setText(String.format("%s VNĐ/giờ", dinhDangTien.format(vl.getMucLuong())));
             holder.tvDiaDiem.setText(vl.getDiaDiem());
 
             holder.itemView.setOnClickListener(v -> {

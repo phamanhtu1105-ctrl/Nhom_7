@@ -76,7 +76,7 @@ public class TrangChuActivity extends AppCompatActivity {
         if (hoTen != null && !hoTen.isEmpty()) {
             tvChaoSinhVien.setText(hoTen);
         } else {
-            tvChaoSinhVien.setText("Sinh viên");
+            tvChaoSinhVien.setText(R.string.sub_title_app);
         }
     }
 

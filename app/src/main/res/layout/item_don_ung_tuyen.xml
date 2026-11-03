@@ -31,11 +31,11 @@
                 android:layout_weight="1"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:text="Tên công việc"
                 android:textColor="@color/mau_chu_chinh"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="all"
+                tools:text="Tên công việc" />
 
             <TextView
                 android:id="@+id/tvTrangThai"
@@ -44,11 +44,11 @@
                 android:background="@drawable/khung_nhap_lieu"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="3dp"
-                android:text="Chờ xét duyệt"
                 android:textColor="@color/mau_cam"
                 android:textSize="12sp"
                 android:textStyle="bold"
-                tools:ignore="all" />
+                tools:ignore="all"
+                tools:text="Chờ xét duyệt" />
         </LinearLayout>
 
         <TextView
@@ -56,21 +56,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="Tên nhà tuyển dụng"
             android:textColor="@color/mau_chu_phu"
             android:textSize="13sp"
-            tools:ignore="all" />
+            tools:ignore="all"
+            tools:text="Tên nhà tuyển dụng" />
 
         <TextView
             android:id="@+id/tvMucLuong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
-            android:text="Mức lương: 25.000 VNĐ/giờ"
             android:textColor="@color/mau_phu"
             android:textSize="14sp"
             android:textStyle="bold"
-            tools:ignore="all" />
+            tools:ignore="all"
+            tools:text="Mức lương: 25.000 VNĐ/giờ" />
 
         <TextView
             android:id="@+id/tvLoiGioiThieu"
@@ -79,10 +79,10 @@
             android:layout_marginTop="6dp"
             android:background="#F9F9F9"
             android:padding="8dp"
-            android:text="Lời giới thiệu..."
             android:textColor="@color/mau_chu_chinh"
             android:textSize="12sp"
-            tools:ignore="all" />
+            tools:ignore="all"
+            tools:text="Lời giới thiệu..." />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,20 +97,20 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Ngày ứng tuyển: 02/11/2026"
                 android:textColor="@color/mau_chu_phu"
                 android:textSize="12sp"
-                tools:ignore="all" />
+                tools:ignore="all"
+                tools:text="Ngày ứng tuyển: 02/11/2026" />
 
             <Button
                 android:id="@+id/btnHuyDon"
-                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:paddingHorizontal="10dp"
-                android:paddingVertical="0dp"
-                android:text="Hủy đơn"
-                android:textColor="@color/mau_do"
+                android:layout_height="48dp"
+                android:minHeight="48dp"
+                android:backgroundTint="@color/mau_do"
+                android:paddingHorizontal="12dp"
+                android:text="@string/btn_huy_don"
+                android:textColor="@color/white"
                 android:textSize="12sp"
                 tools:ignore="all" />
         </LinearLayout>

@@ -7,14 +7,33 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.example.nhom7.model.SinhVien;
 
+import com.example.nhom7.tienich.MaHoaMatKhau;
+
 /**
- * Lớp DAO xử lý dữ liệu liên quan đến Sinh viên
+ * Lớp DAO xử lý dữ liệu liên quan đến Sinh viên và Admin
  */
 public class SinhVienDAO {
     private final QuanLyCSDL dbHelper;
 
     public SinhVienDAO(Context context) {
         dbHelper = new QuanLyCSDL(context);
+        kiemTraVaTaoAdmin();
+    }
+
+    // Tự động kiểm tra và khởi tạo tài khoản Admin nếu chưa tồn tại
+    public void kiemTraVaTaoAdmin() {
+        if (!kiemTraEmailTonTai("admin@gmail.com")) {
+            SinhVien admin = new SinhVien(
+                    "ADMIN001",
+                    "Quản Trị Viên (ADMIN)",
+                    "admin@gmail.com",
+                    "0900000000",
+                    MaHoaMatKhau.maHoaSHA256("admin123"),
+                    "Hệ thống Quản trị Nhom_7",
+                    "Tài khoản Quản trị viên hệ thống."
+            );
+            themSinhVien(admin);
+        }
     }
 
     // Đăng ký tài khoản Sinh viên mới

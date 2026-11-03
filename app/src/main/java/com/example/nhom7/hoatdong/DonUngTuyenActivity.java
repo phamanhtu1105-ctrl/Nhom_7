@@ -55,7 +55,7 @@ public class DonUngTuyenActivity extends AppCompatActivity {
 
     private void taiDanhSachDon() {
         int sinhVienId = quanLyPhien.laySinhVienId();
-        if (sinhVienId == -1) {
+        if (sinhVienId < 0) {
             tvKhongCoDuLieu.setVisibility(View.VISIBLE);
             rvDanhSachDon.setVisibility(View.GONE);
             return;

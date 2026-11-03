@@ -1,5 +1,6 @@
 package com.example.nhom7.database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -138,6 +139,36 @@ public class ViecLamDAO {
         cursor.close();
         db.close();
         return list;
+    }
+
+    // [Dành cho Admin] Thêm việc làm mới
+    public long themViecLam(ViecLam vl) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put("nha_tuyen_dung_id", vl.getNhaTuyenDungId() > 0 ? vl.getNhaTuyenDungId() : 1);
+        cv.put("danh_muc_id", vl.getDanhMucId() > 0 ? vl.getDanhMucId() : 1);
+        cv.put("ten_viec_lam", vl.getTenViecLam());
+        cv.put("mo_ta", vl.getMoTa());
+        cv.put("muc_luong", vl.getMucLuong());
+        cv.put("dia_diem", vl.getDiaDiem());
+        cv.put("thoi_gian_lam_viec", vl.getThoiGianLamViec());
+        cv.put("hinh_thuc_lam_viec", vl.getHinhThucLamViec() != null ? vl.getHinhThucLamViec() : "Bán thời gian");
+        cv.put("yeu_cau", vl.getYeuCau());
+        cv.put("quyen_loi", vl.getQuyenLoi());
+        cv.put("han_ung_tuyen", vl.getHanUngTuyen());
+        cv.put("ngay_dang", vl.getNgayDang());
+
+        long res = db.insert(QuanLyCSDL.BANG_VIEC_LAM, null, cv);
+        db.close();
+        return res;
+    }
+
+    // [Dành cho Admin] Xóa việc làm theo ID
+    public boolean xoaViecLam(int viecLamId) {
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        int rows = db.delete(QuanLyCSDL.BANG_VIEC_LAM, "viec_lam_id = ?", new String[]{String.valueOf(viecLamId)});
+        db.close();
+        return rows > 0;
     }
 
     // Đọc đối tượng ViecLam từ Cursor

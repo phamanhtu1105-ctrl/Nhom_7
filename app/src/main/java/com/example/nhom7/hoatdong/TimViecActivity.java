@@ -112,9 +112,9 @@ public class TimViecActivity extends AppCompatActivity {
         if (intent != null) {
             if (intent.hasExtra("danhMucId")) {
                 selectedDanhMucId = intent.getIntExtra("danhMucId", 0);
-                for (int i = 0; i < danhSachDanhMuc.size(); i++) {
-                    if (danhSachDanhMuc.get(i).getDanhMucId() == selectedDanhMucId) {
-                        spnDanhMuc.setSelection(i + 1);
+                for (DanhMuc dm : danhSachDanhMuc) {
+                    if (dm.getDanhMucId() == selectedDanhMucId) {
+                        spnDanhMuc.setSelection(danhSachDanhMuc.indexOf(dm) + 1);
                         break;
                     }
                 }
@@ -134,11 +134,7 @@ public class TimViecActivity extends AppCompatActivity {
         spnDanhMuc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    selectedDanhMucId = 0;
-                } else {
-                    selectedDanhMucId = danhSachDanhMuc.get(position - 1).getDanhMucId();
-                }
+                selectedDanhMucId = (position == 0) ? 0 : danhSachDanhMuc.get(position - 1).getDanhMucId();
                 thucHienTimKiemVaLoc();
             }
 
@@ -149,11 +145,7 @@ public class TimViecActivity extends AppCompatActivity {
         spnDiaDiem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 0) {
-                    selectedDiaDiem = "Tất cả";
-                } else {
-                    selectedDiaDiem = danhSachDiaDiem.get(position);
-                }
+                selectedDiaDiem = (position == 0) ? "Tất cả" : danhSachDiaDiem.get(position);
                 thucHienTimKiemVaLoc();
             }
 
@@ -164,12 +156,16 @@ public class TimViecActivity extends AppCompatActivity {
         spnSapXep.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if (position == 1) {
-                    selectedSapXepKey = "luong_tang";
-                } else if (position == 2) {
-                    selectedSapXepKey = "luong_giam";
-                } else {
-                    selectedSapXepKey = "moi_nhat";
+                switch (position) {
+                    case 1:
+                        selectedSapXepKey = "luong_tang";
+                        break;
+                    case 2:
+                        selectedSapXepKey = "luong_giam";
+                        break;
+                    default:
+                        selectedSapXepKey = "moi_nhat";
+                        break;
                 }
                 thucHienTimKiemVaLoc();
             }
