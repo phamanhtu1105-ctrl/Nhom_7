@@ -29,17 +29,6 @@
             android:textStyle="bold"
             tools:ignore="all" />
 
-        <Button
-            android:id="@+id/btnDangXuatAdmin"
-            style="@style/Widget.Material3.Button.OutlinedButton"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
-            android:paddingHorizontal="12dp"
-            android:text="Đăng xuất"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            tools:ignore="all" />
-
     </LinearLayout>
 
     <ScrollView
@@ -181,6 +170,17 @@
                 android:textColor="@color/mau_chu_phu"
                 android:textSize="13sp"
                 android:visibility="gone"
+                tools:ignore="all" />
+
+            <Button
+                android:id="@+id/btnDangXuatAdmin"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:paddingHorizontal="12dp"
+                android:text="Đăng xuất"
+                android:textColor="@color/black"
+                android:textSize="12sp"
                 tools:ignore="all" />
 
         </LinearLayout>
