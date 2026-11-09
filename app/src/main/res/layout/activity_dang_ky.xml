@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen"
+    android:fillViewport="true"
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_dang_ky"
+            android:textColor="@color/mau_chu_dao"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/sub_title_dang_ky"
+            android:textColor="@color/mau_chu_phu"
+            android:textSize="13sp"
+            tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:labelFor="@+id/edtMaSinhVien"
+                android:text="@string/lbl_ma_sinh_vien_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtMaSinhVien"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="username"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_ma_sinh_vien"
+                android:importantForAutofill="no"
+                android:inputType="textCapCharacters"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtHoTen"
+                android:text="@string/lbl_ho_ten_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtHoTen"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="name"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_ho_ten"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtEmail"
+                android:text="@string/lbl_email_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_email_dk"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtSoDienThoai"
+                android:text="@string/lbl_sdt_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtSoDienThoai"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="phone"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_sdt"
+                android:importantForAutofill="no"
+                android:inputType="phone"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtTenTruong"
+                android:text="@string/lbl_truong_hoc_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtTenTruong"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="organizationName"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_truong_hoc"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtMatKhau"
+                android:text="@string/lbl_mat_khau_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="password"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_mat_khau_min"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:labelFor="@+id/edtXacNhanMatKhau"
+                android:text="@string/lbl_xac_nhan_mat_khau_req"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+            <EditText
+                android:id="@+id/edtXacNhanMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:autofillHints="password"
+                android:background="@drawable/khung_nhap_lieu"
+                android:hint="@string/hint_xac_nhan_mat_khau"
+                android:importantForAutofill="no"
+                android:inputType="textPassword"
+                android:paddingHorizontal="12dp"
+                android:textSize="14sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <Button
+                android:id="@+id/btnDangKy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/mau_chu_dao"
+                android:text="@string/btn_dang_ky_tai_khoan"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintBounds" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                tools:ignore="Autofill,LabelFor,HardcodedText">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_da_co_tai_khoan"
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvChuyenDangNhap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="@string/btn_dang_nhap_ngay"
+                    android:textColor="@color/mau_chu_dao"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

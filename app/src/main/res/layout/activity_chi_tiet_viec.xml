@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen"
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+    <!-- Header Toolbar -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/mau_chu_dao"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+        <ImageView
+            android:id="@+id/btnQuayLai"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/text_quay_lai"
+            android:src="@drawable/ic_trang_chu"
+            app:tint="@color/white"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/title_chi_tiet_cong_viec"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+        <ImageView
+            android:id="@+id/btnYeuThich"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:contentDescription="@string/text_yeu_thich"
+            android:src="@drawable/ic_yeu_thich"
+            app:tint="@color/white"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/layoutBottomAction"
+        android:layout_below="@id/layoutHeader"
+        android:fillViewport="true"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+            <!-- Thẻ Thông Tin Tổng Quan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+                <TextView
+                    android:id="@+id/tvTenViecLam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Tên công việc" />
+
+                <TextView
+                    android:id="@+id/tvTenNhaTuyenDung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Nhà tuyển dụng" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="@color/mau_vien" />
+
+                <TextView
+                    android:id="@+id/tvMucLuong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/mau_phu"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Mức lương: 25.000 VNĐ/giờ" />
+
+                <TextView
+                    android:id="@+id/tvDiaDiem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Địa điểm: Quận 1, TP.HCM" />
+
+                <TextView
+                    android:id="@+id/tvThoiGianLamViec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Thời gian: Ca sáng 7h-11h" />
+
+                <TextView
+                    android:id="@+id/tvHinhThucLamViec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="13sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Hình thức: Bán thời gian" />
+
+                <TextView
+                    android:id="@+id/tvHanUngTuyen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/mau_cam"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                    tools:text="Hạn ứng tuyển: 30/12/2026" />
+
+            </LinearLayout>
+
+            <!-- Mô tả công việc -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="MÔ TẢ CÔNG VIỆC"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+            <TextView
+                android:id="@+id/tvMoTa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                tools:text="Chi tiết mô tả công việc..." />
+
+            <!-- Yêu cầu ứng viên -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="YÊU CẦU ỨNG VIÊN"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+            <TextView
+                android:id="@+id/tvYeuCau"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                tools:text="Yêu cầu kỹ năng..." />
+
+            <!-- Quyền lợi -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="QUYỀN LỢI ĐƯỢC HƯỞNG"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+            <TextView
+                android:id="@+id/tvQuyenLoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="13sp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation"
+                tools:text="Quyền lợi sinh viên..." />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Nút Ứng tuyển -->
+    <LinearLayout
+        android:id="@+id/layoutBottomAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:padding="12dp"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+        <Button
+            android:id="@+id/btnUngTuyen"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="@color/mau_chu_dao"
+            android:text="@string/text_ung_tuyen_ngay"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+    </LinearLayout>
+
+</RelativeLayout>

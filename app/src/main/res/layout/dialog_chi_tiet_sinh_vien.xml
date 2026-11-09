@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    tools:ignore="all">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        tools:ignore="all">
+
+        <!-- Header Icon & Name -->
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="center"
+            android:text="🎓"
+            android:textSize="32sp"
+            tools:ignore="all" />
+
+        <TextView
+            android:id="@+id/tvDialogHoTenSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Nguyễn Văn An"
+            android:textColor="@color/mau_chu_chinh"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <TextView
+            android:id="@+id/tvDialogMaSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Mã SV: SV001"
+            android:textColor="@color/mau_chu_dao"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginVertical="14dp"
+            android:background="@color/mau_vien" />
+
+        <!-- Info items -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="all">
+
+            <!-- School -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🏫 Trường đào tạo:"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvDialogTruongSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="Đại học Công nghệ"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:ignore="all" />
+
+            <!-- Email -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="✉️ Email liên hệ:"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvDialogEmailSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="sv001@gmail.com"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                tools:ignore="all" />
+
+            <!-- Phone -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📞 Số điện thoại:"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvDialogSdtSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="0912345678"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="14sp"
+                tools:ignore="all" />
+
+            <!-- Bio -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📝 Giới thiệu bản thân:"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvDialogGioiThieuSV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/khung_nhap_lieu"
+                android:padding="10dp"
+                android:text="Sinh viên năm 4 ngành CNTT..."
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="13sp"
+                tools:ignore="all" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

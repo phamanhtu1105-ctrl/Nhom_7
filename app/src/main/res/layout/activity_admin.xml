@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen"
+    android:orientation="vertical"
+    tools:ignore="all">
+
+    <!-- Header Bar -->
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/mau_chu_dao_dam"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        tools:ignore="all">
+
+        <TextView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="center"
+            android:text="🛡️"
+            android:textSize="18sp"
+            tools:ignore="all" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="all">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BẢNG QUẢN TRỊ HỆ THỐNG"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="all" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xin chào Admin • Quản lý toàn diện"
+                android:textColor="#E0E0E0"
+                android:textSize="11sp"
+                tools:ignore="all" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnDangXuatAdmin"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:paddingHorizontal="10dp"
+            android:text="🚪 Đăng xuất"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:ignore="all" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:ignore="all">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            tools:ignore="all">
+
+            <!-- 4 Dashboard Stat Cards (Grid 2x2) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:ignore="all">
+
+                <!-- Stat Card 1: Tổng đơn -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvTongDon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_chu_dao"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tổng Đơn"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="11sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Stat Card 2: Đơn chờ duyệt -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvDonChoDuyet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_cam"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chờ Xét Duyệt"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="11sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Stat Card 3: Công việc -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvTongViec"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_phu"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Công Việc"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="11sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Stat Card 4: Sinh viên -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    tools:ignore="all">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="all">
+
+                        <TextView
+                            android:id="@+id/tvTongSinhVien"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/mau_chu_dao_dam"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            tools:ignore="all" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sinh Viên"
+                            android:textColor="@color/mau_chu_phu"
+                            android:textSize="11sp"
+                            tools:ignore="all" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- 3 Main Segmented Feature Tabs -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/khung_nhap_lieu"
+                android:orientation="horizontal"
+                android:padding="3dp"
+                tools:ignore="all">
+
+                <Button
+                    android:id="@+id/btnTabDuyetDon"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/mau_chu_dao"
+                    android:paddingHorizontal="2dp"
+                    android:text="📋 Duyệt Đơn"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    tools:ignore="all" />
+
+                <Button
+                    android:id="@+id/btnTabCongViec"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="2dp"
+                    android:text="💼 Công Việc"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="11sp"
+                    tools:ignore="all" />
+
+                <Button
+                    android:id="@+id/btnTabSinhVien"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="2dp"
+                    android:text="🎓 Sinh Viên"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="11sp"
+                    tools:ignore="all" />
+
+            </LinearLayout>
+
+            <!-- SECTION 1: TAB DUYỆT ĐƠN ỨNG TUYỂN -->
+            <LinearLayout
+                android:id="@+id/layoutTabDuyetDon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible"
+                tools:ignore="all">
+
+                <!-- Filter Chips Bar for Application Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    tools:ignore="all">
+
+                    <Button
+                        android:id="@+id/btnFilterTatCa"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="2dp"
+                        android:text="Tất cả"
+                        android:textColor="@color/mau_chu_dao"
+                        android:textSize="10sp"
+                        tools:ignore="all" />
+
+                    <Button
+                        android:id="@+id/btnFilterChoDuyet"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="2dp"
+                        android:text="Chờ duyệt"
+                        android:textColor="@color/mau_cam"
+                        android:textSize="10sp"
+                        tools:ignore="all" />
+
+                    <Button
+                        android:id="@+id/btnFilterChapNhan"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_marginEnd="2dp"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="2dp"
+                        android:text="Đã duyệt"
+                        android:textColor="@color/mau_phu"
+                        android:textSize="10sp"
+                        tools:ignore="all" />
+
+                    <Button
+                        android:id="@+id/btnFilterTuChoi"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="34dp"
+                        android:layout_weight="1"
+                        android:paddingHorizontal="2dp"
+                        android:text="Từ chối"
+                        android:textColor="@color/mau_do"
+                        android:textSize="10sp"
+                        tools:ignore="all" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDonUngTuyenAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:ignore="all" />
+
+                <TextView
+                    android:id="@+id/tvKhongCoDonAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="Không có đơn ứng tuyển nào phù hợp."
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    tools:ignore="all" />
+
+            </LinearLayout>
+
+            <!-- SECTION 2: TAB QUẢN LÝ CÔNG VIỆC -->
+            <LinearLayout
+                android:id="@+id/layoutTabCongViec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:ignore="all">
+
+                <Button
+                    android:id="@+id/btnThemViecLam"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:backgroundTint="@color/mau_phu"
+                    android:text="+ THÊM CÔNG VIỆC MỚI"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    tools:ignore="all" />
+
+                <EditText
+                    android:id="@+id/edtTimKiemCongViecAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="8dp"
+                    android:autofillHints="none"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:hint="🔍 Tìm kiếm công việc..."
+                    android:importantForAutofill="no"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="13sp"
+                    tools:ignore="all" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvViecLamAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:ignore="all" />
+
+                <TextView
+                    android:id="@+id/tvKhongCoViecAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="Chưa có công việc nào."
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    tools:ignore="all" />
+
+            </LinearLayout>
+
+            <!-- SECTION 3: TAB QUẢN LÝ SINH VIÊN -->
+            <LinearLayout
+                android:id="@+id/layoutTabSinhVien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:ignore="all">
+
+                <EditText
+                    android:id="@+id/edtTimKiemSinhVienAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:autofillHints="none"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:hint="🔍 Tìm theo họ tên, MSSV, trường..."
+                    android:importantForAutofill="no"
+                    android:paddingHorizontal="12dp"
+                    android:textSize="13sp"
+                    tools:ignore="all" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvSinhVienAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:ignore="all" />
+
+                <TextView
+                    android:id="@+id/tvKhongCoSinhVienAdmin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center"
+                    android:text="Chưa có sinh viên nào đăng ký."
+                    android:textColor="@color/mau_chu_phu"
+                    android:textSize="13sp"
+                    android:visibility="gone"
+                    tools:ignore="all" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

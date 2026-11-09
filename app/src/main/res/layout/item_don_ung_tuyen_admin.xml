@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    tools:ignore="all">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        tools:ignore="all">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="all">
+
+            <TextView
+                android:id="@+id/tvHoTenSinhVien"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/mau_chu_chinh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:ignore="all"
+                tools:text="Sinh viên: Nguyễn Văn A" />
+
+            <TextView
+                android:id="@+id/tvTrangThaiAdmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/khung_nhap_lieu"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:textColor="@color/mau_cam"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                tools:ignore="all"
+                tools:text="Chờ xét duyệt" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvTenViecLamAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/mau_chu_dao"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:ignore="all"
+            tools:text="Công việc: Nhân viên bán hàng" />
+
+        <TextView
+            android:id="@+id/tvNhaTuyenDungAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/mau_chu_phu"
+            android:textSize="12sp"
+            tools:ignore="all"
+            tools:text="Highlands Coffee" />
+
+        <TextView
+            android:id="@+id/tvLoiGioiThieuAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="#F5F5F5"
+            android:padding="6dp"
+            android:textColor="@color/mau_chu_chinh"
+            android:textSize="12sp"
+            tools:ignore="all"
+            tools:text="Lời giới thiệu: Em bận học buổi sáng..." />
+
+        <!-- Nút hành động cho Admin -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            tools:ignore="all">
+
+            <Button
+                android:id="@+id/btnTuChoi"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginEnd="8dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="Từ chối"
+                android:textColor="@color/mau_do"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <Button
+                android:id="@+id/btnChapNhan"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:backgroundTint="@color/mau_phu"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="0dp"
+                android:text="Chấp nhận"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Nhom_7</string>
+
+    <!-- Màn hình Đăng nhập -->
+    <string name="title_app">TÌM VIỆC BÁN THỜI GIAN</string>
+    <string name="sub_title_app">Dành cho Sinh viên</string>
+    <string name="lbl_dang_nhap">ĐĂNG NHẬP</string>
+    <string name="lbl_email_sinh_vien">Email sinh viên</string>
+    <string name="hint_email">Nhập email (ví dụ: sv001@gmail.com)</string>
+    <string name="lbl_mat_khau">Mật khẩu</string>
+    <string name="hint_mat_khau">Nhập mật khẩu</string>
+    <string name="btn_dang_nhap">ĐĂNG NHẬP</string>
+    <string name="lbl_chua_co_tai_khoan">Chưa có tài khoản? </string>
+    <string name="btn_dang_ky_ngay">Đăng ký ngay</string>
+
+    <!-- Màn hình Đăng ký -->
+    <string name="title_dang_ky">TẠO TÀI KHOẢN SINH VIÊN</string>
+    <string name="sub_title_dang_ky">Điền đầy đủ thông tin để tham gia hệ thống</string>
+    <string name="lbl_ma_sinh_vien_req">Mã sinh viên (*)</string>
+    <string name="hint_ma_sinh_vien">Ví dụ: SV002</string>
+    <string name="lbl_ho_ten_req">Họ và tên (*)</string>
+    <string name="hint_ho_ten">Ví dụ: Nguyễn Văn B</string>
+    <string name="lbl_email_req">Email sinh viên (*)</string>
+    <string name="hint_email_dk">Ví dụ: sv002@gmail.com</string>
+    <string name="lbl_sdt_req">Số điện thoại (*)</string>
+    <string name="hint_sdt">Ví dụ: 0987654321</string>
+    <string name="lbl_truong_hoc_req">Trường học (*)</string>
+    <string name="hint_truong_hoc">Ví dụ: Đại học Công nghệ</string>
+    <string name="lbl_mat_khau_req">Mật khẩu (*)</string>
+    <string name="hint_mat_khau_min">Tối thiểu 6 ký tự</string>
+    <string name="lbl_xac_nhan_mat_khau_req">Xác nhận mật khẩu (*)</string>
+    <string name="hint_xac_nhan_mat_khau">Nhập lại mật khẩu</string>
+    <string name="btn_dang_ky_tai_khoan">ĐĂNG KÝ TÀI KHOẢN</string>
+    <string name="lbl_da_co_tai_khoan">Đã có tài khoản? </string>
+    <string name="btn_dang_nhap_ngay">Đăng nhập ngay</string>
+
+    <!-- Màn hình Trang chủ -->
+    <string name="lbl_xin_chao">Xin chào,</string>
+    <string name="sub_title_trang_chu">Tìm công việc bán thời gian phù hợp với bạn!</string>
+    <string name="hint_tim_kiem_nhanh">Tìm kiếm tên công việc, vị trí...</string>
+    <string name="title_danh_muc">DANH MỤC CÔNG VIỆC</string>
+    <string name="title_viec_moi">CÔNG VIỆC MỚI NHẤT</string>
+    <string name="text_xem_tat_ca">Xem tất cả ➔</string>
+    <string name="no_data_found">Không tìm thấy công việc phù hợp.</string>
+    <string name="no_data_empty">Hiện chưa có dữ liệu phù hợp.</string>
+
+    <!-- Màn hình Ứng tuyển & Chi tiết -->
+    <string name="title_nop_don_ung_tuyen">NỘP ĐƠN ỨNG TUYỂN</string>
+    <string name="lbl_loi_gioi_thieu_req">Lời giới thiệu bản thân (*)</string>
+    <string name="sub_lbl_loi_gioi_thieu">Nêu ngắn gọn lịch học, kinh nghiệm hoặc mong muốn công việc để gây ấn tượng với nhà tuyển dụng.</string>
+    <string name="hint_loi_gioi_thieu">Ví dụ: Em muốn đăng ký ca làm việc buổi tối vì ban ngày bận lịch học ở trường...</string>
+    <string name="btn_gui_don_ung_tuyen">GỬI ĐƠN ỨNG TUYỂN</string>
+    <string name="text_quay_lai">Quay lại</string>
+    <string name="text_yeu_thich">Yêu thích</string>
+    <string name="btn_huy_don">Hủy đơn</string>
+    <string name="status_cho_xet_duyet">Chờ xét duyệt</string>
+
+    <!-- Màn hình Tìm việc, Yêu thích, Đơn, Hồ sơ -->
+    <string name="title_tim_kiem_cong_viec">TÌM KIẾM CÔNG VIỆC</string>
+    <string name="title_cong_viec_yeu_thich">CÔNG VIỆC YÊU THÍCH</string>
+    <string name="title_don_ung_tuyen_cua_toi">ĐƠN ỨNG TUYỂN CỦA TÔI</string>
+    <string name="title_ho_so_ca_nhan">HỒ SƠ CÁ NHÂN</string>
+    <string name="title_chi_tiet_cong_viec">CHI TIẾT CÔNG VIỆC</string>
+    <string name="text_thong_tin_ca_nhan">THÔNG TIN CÁ NHÂN</string>
+    <string name="text_doi_mat_khau">ĐỔI MẬT KHẨU</string>
+    <string name="text_dang_xuat">ĐĂNG XUẤT TÀI KHOẢN</string>
+    <string name="text_ung_tuyen_ngay">ỨNG TUYỂN NGAY</string>
+</resources>

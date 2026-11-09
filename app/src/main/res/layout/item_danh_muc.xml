@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:ignore="HardcodedText,Autofill,ContentDescription">
+
+    <View
+        android:id="@+id/vBieuTungNen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/khung_nhap_lieu"
+        android:backgroundTint="#E3F2FD" />
+
+    <TextView
+        android:id="@+id/tvTenDanhMuc"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:maxLines="2"
+        android:text="Danh mục"
+        android:textColor="@color/mau_chu_chinh"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    tools:ignore="all">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        tools:ignore="all">
+
+        <!-- Avatar Icon -->
+        <TextView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="center"
+            android:text="🎓"
+            android:textSize="22sp"
+            tools:ignore="all" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:ignore="all">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="all">
+
+                <TextView
+                    android:id="@+id/tvHoTenSVAdminItem"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Nguyễn Văn A"
+                    android:textColor="@color/mau_chu_chinh"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tools:ignore="all" />
+
+                <TextView
+                    android:id="@+id/tvMaSVAdminItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SV001"
+                    android:textColor="@color/mau_chu_dao"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:ignore="all" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTruongSVAdminItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Đại học Công nghệ"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="12sp"
+                tools:ignore="all" />
+
+            <TextView
+                android:id="@+id/tvEmailSVAdminItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="sv001@gmail.com | 0912345678"
+                android:textColor="@color/mau_chu_phu"
+                android:textSize="11sp"
+                tools:ignore="all" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnChiTietSVAdmin"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:layout_marginStart="4dp"
+            android:paddingHorizontal="8dp"
+            android:text="Xem Hồ Sơ"
+            android:textColor="@color/mau_chu_dao"
+            android:textSize="12sp"
+            tools:ignore="all" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:ignore="all">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="all">
+
+        <TextView
+            android:id="@+id/tvTieuDeDialogViecLam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THÊM CÔNG VIỆC MỚI"
+            android:textColor="@color/mau_chu_dao"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <!-- Choose Category Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Danh mục công việc (*)"
+            android:textColor="@color/mau_chu_chinh"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <Spinner
+            android:id="@+id/spnDanhMucDialog"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/khung_nhap_lieu"
+            android:paddingHorizontal="8dp"
+            tools:ignore="all" />
+
+        <!-- Choose Company Spinner -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Nhà tuyển dụng / Công ty (*)"
+            android:textColor="@color/mau_chu_chinh"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            tools:ignore="all" />
+
+        <Spinner
+            android:id="@+id/spnNhaTuyenDungDialog"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/khung_nhap_lieu"
+            android:paddingHorizontal="8dp"
+            tools:ignore="all" />
+
+        <!-- Job Name -->
+        <EditText
+            android:id="@+id/edtTenViec"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:hint="Tên công việc (*)"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Salary -->
+        <EditText
+            android:id="@+id/edtLuong"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:hint="Mức lương VNĐ/giờ (ví dụ: 30000) (*)"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Location -->
+        <EditText
+            android:id="@+id/edtDiaDiemViec"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:hint="Địa điểm (*)"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Working Time -->
+        <EditText
+            android:id="@+id/edtThoiGianViec"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:hint="Thời gian làm việc (ví dụ: Ca tối 18h-22h)"
+            android:importantForAutofill="no"
+            android:paddingHorizontal="10dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/edtMoTaViec"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="top|start"
+            android:hint="Mô tả công việc"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Requirements -->
+        <EditText
+            android:id="@+id/edtYeuCauViec"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="top|start"
+            android:hint="Yêu cầu ứng viên"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+        <!-- Benefits -->
+        <EditText
+            android:id="@+id/edtQuyenLoiViec"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:autofillHints="none"
+            android:background="@drawable/khung_nhap_lieu"
+            android:gravity="top|start"
+            android:hint="Quyền lợi"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:padding="8dp"
+            android:textSize="14sp"
+            tools:ignore="all" />
+
+    </LinearLayout>
+
+</ScrollView>

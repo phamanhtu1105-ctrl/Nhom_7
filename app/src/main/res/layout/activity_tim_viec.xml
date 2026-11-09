@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mau_nen"
+    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation"
+        android:orientation="vertical"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/mau_chu_dao"
+            android:gravity="center"
+            android:text="@string/title_tim_kiem_cong_viec"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+        <!-- Ô Tìm kiếm & Bộ Lọc -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="12dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/khung_nhap_lieu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+                <EditText
+                    android:id="@+id/edtTimKiem"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autofillHints="none"
+                    android:background="@null"
+                    android:hint="@string/hint_tim_kiem_nhanh"
+                    android:imeOptions="actionSearch"
+                    android:importantForAutofill="no"
+                    android:inputType="text"
+                    android:textSize="14sp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+                <ImageView
+                    android:id="@+id/btnTimKiem"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:contentDescription="@string/title_tim_kiem_cong_viec"
+                    android:src="@drawable/ic_tim_viec"
+                    app:tint="@color/mau_chu_dao"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+            </LinearLayout>
+
+            <!-- Bảng lọc Spinner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation">
+
+                <Spinner
+                    android:id="@+id/spnDanhMuc"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Spinner
+                    android:id="@+id/spnDiaDiem"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+                <View
+                    android:layout_width="6dp"
+                    android:layout_height="1dp" />
+
+                <Spinner
+                    android:id="@+id/spnSapXep"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/khung_nhap_lieu"
+                    android:paddingHorizontal="4dp"
+                    tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Danh sách kết quả -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDanhSachViecLam"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+        <TextView
+            android:id="@+id/tvKhongCoDuLieu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:textColor="@color/mau_chu_phu"
+            android:textSize="14sp"
+            android:visibility="gone"
+            tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="8dp"
+        app:itemIconTint="@color/mau_chu_dao"
+        app:itemTextColor="@color/mau_chu_dao"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="Autofill,LabelFor,HardcodedText,TouchTargetSizeCheck,VisualLintButtonSize,VisualLintBounds,TextContrastCheck,SmallSp,UseCompoundDrawables,MissingTranslation" />
+
+</RelativeLayout>
